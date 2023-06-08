@@ -1,25 +1,16 @@
 while True:
-
     file_path = input("Введіть шлях до файлу: ")
-
     try:
-
         with open(file_path, 'r') as file:
-
             lines = file.readlines()
-
 
             num_lines = len(lines)
 
-
             num_empty_lines = len([line for line in lines if line.strip() == ""])
-
 
             num_lines_with_z = len([line for line in lines if "z" in line])
 
-
             num_z_chars = sum([line.count("z") for line in lines])
-
 
             num_and_lines = len([line for line in lines if "and" in line])
 
@@ -31,7 +22,6 @@ while True:
 
     except FileNotFoundError:
         print("Файл не знайдено.")
-
 
     choice = input("Бажаєте проаналізувати ще один файл? (y/n) ")
 
